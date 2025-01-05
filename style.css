@@ -1,0 +1,69 @@
+body {
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(120deg, #a18cd1, #fbc2eb); /* Artistic gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+button {
+    position: absolute;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #ff6f61;
+    color: #fff;
+    border-radius: 10px;
+    transition: transform 0.2s ease; /* Add subtle animation on hover */
+}
+
+button:active {
+    transform: scale(0.9); /* Scale button on click */
+}
+
+#counter {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 8px;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Falling circle animation */
+.circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    animation: fall linear;
+}
+
+@keyframes fall {
+    from {
+        top: -50px;
+        opacity: 1;
+    }
+    to {
+        top: 100vh;
+        opacity: 0;
+    }
+}
