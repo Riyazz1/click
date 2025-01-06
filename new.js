@@ -2,7 +2,7 @@ const button = document.getElementById('runaway-button');
 const counter = document.getElementById('counter');
 let clickCount = 0;
 
-// Button avoids cursor
+
 button.addEventListener('mousemove', (event) => {
     const mouseX = event.clientX;
     const mouseY = event.clientY;
@@ -35,14 +35,14 @@ button.addEventListener('mousemove', (event) => {
     }
 });
 
-// Update counter on button click
+
 button.addEventListener('click', () => {
     clickCount++;
     counter.textContent = `Clicks: ${clickCount}`;
     animateCounter();
 });
 
-// Animate the counter
+
 function animateCounter() {
     counter.style.transform = 'scale(1.2)';
     setTimeout(() => {
@@ -50,28 +50,28 @@ function animateCounter() {
     }, 200);
 }
 
-// Create falling circles
+
 function createFallingCircle() {
     const circle = document.createElement('div');
     circle.classList.add('circle');
 
-    const size = Math.random() * 30 + 10; // Random size
+    const size = Math.random() * 30 + 10; 
     circle.style.width = `${size}px`;
     circle.style.height = `${size}px`;
 
-    const startX = Math.random() * window.innerWidth; // Random horizontal position
+    const startX = Math.random() * window.innerWidth; 
     circle.style.left = `${startX}px`;
 
-    const duration = Math.random() * 3 + 2; // Random fall duration
+    const duration = Math.random() * 3 + 2; 
     circle.style.animationDuration = `${duration}s`;
 
     document.body.appendChild(circle);
 
-    // Remove the circle after animation ends
+    
     circle.addEventListener('animationend', () => {
         circle.remove();
     });
 }
 
-// Generate circles at intervals
+
 setInterval(createFallingCircle, 300);
