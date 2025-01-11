@@ -17,7 +17,7 @@ button {
     font-size: 16px;
     cursor: pointer;
     border: none;
-    background-color: #ff6f61;
+    background-color: #e44638;
     color: #fff;
     border-radius: 10px;
     transition: transform 0.2s ease; /* Add subtle animation on hover */

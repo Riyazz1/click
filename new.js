@@ -38,7 +38,7 @@ button.addEventListener('mousemove', (event) => {
 
 button.addEventListener('click', () => {
     clickCount++;
-    counter.textContent = `Clicks: ${clickCount}`;
+    counter.textContent = `Click: ${clickCount}`;
     animateCounter();
 });
 
